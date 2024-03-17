@@ -15,7 +15,7 @@ Vue:
 测试方法：
 使用anconda开启后端：
 首先切换到Django环境里：例如：conda activate rango
-将anconda的目录切换到：~\HollowApp\hollow_backend
+将anconda的目录切换到：~\HollowApp\hollow_backend （django后端端口号 8000）
 在anconda终端输入 python manage.py runserver
 这个时候后端服务已启动：端口号为8000
 
@@ -28,8 +28,8 @@ npm install
 然后在终端输入命令：npm run dev
 这个时候前端服务已开启 端口号为8080
 
-打开浏览器 输入http://localhost:8080
-即可获得从后端传入到前端的数据 Demo完成
+打开浏览器 输入http://localhost:3000
+即可进入网站
 
 演示图片
 ![image](https://github.com/HelloLeexy/HollowApp/assets/76617194/83e20eaf-483e-4ab0-802a-df4a43bf4b90)
