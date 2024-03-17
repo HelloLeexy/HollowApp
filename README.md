@@ -33,6 +33,7 @@ npm install
 
 演示图片
 ![image](https://github.com/HelloLeexy/HollowApp/assets/76617194/83e20eaf-483e-4ab0-802a-df4a43bf4b90)
+![image](https://github.com/HelloLeexy/HollowApp/assets/76617194/90a3e57a-b9e6-4ae4-8aaa-8de89748a8cc)
 ![image](https://github.com/HelloLeexy/HollowApp/assets/76617194/90e42c87-dcb1-44ab-86c8-7070a7c66ef7)
 ![image](https://github.com/HelloLeexy/HollowApp/assets/76617194/a1026e71-bddd-435e-9507-234738dd8355)
 ![image](https://github.com/HelloLeexy/HollowApp/assets/76617194/ad60d9fd-9364-4824-8e1f-fc3032eb53f0)
