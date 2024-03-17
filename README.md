@@ -2,6 +2,8 @@
 This is a campus forum Web APP based on Vue+Django
 现已部署到阿里服务器：http://8.208.87.180/#/Login
 
+如需部署可用Nginx作反向代理（配置文件已上传至main）
+
 配置环境：
 Django 2.1.5 以上:
 额外依赖包：
