@@ -1,0 +1,61 @@
+.container {
+  margin-top: 18px;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section-header {
+  margin-bottom: 10px;
+}
+
+.card {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tag {
+  /* Add any specific styling for the tags */
+}
+
+.input {
+  /* Add any specific styling for the input */
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+
+
+.classification {
+
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  display: flex;
+  padding: 5px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group .btn {
+  border-color: #ffffff;
+  margin: 2px;
+  color: #007bff; 
+}
+
+.btn-group .btn:hover {
+  color: #0056b3;
+  background-color: #e9ecef;
+}
+
+.btn-group .btn.active,
+.btn-group .btn:active {
+  color: #fff;
+  background-color: #007bff;
+}
+
+

@@ -1,0 +1,32 @@
+<CButtonGroup role="group" aria-label="Basic example" class="custom-button-group">
+    <CButton
+      class="custom-button"
+
+      :class="{ 'active': selectedButton.value=== 'Latest' }"
+      @click="selectButton('Latest')"
+    >
+      Latest Posts
+    </CButton>
+    <CButton
+      class="custom-button"
+
+      :class="{ 'active': selectedButton.value === 'Recommend' }"
+      @click="selectButton('Recommend')"
+    >
+      Recommend
+    </CButton>
+    <CButton
+      class="custom-button"
+
+      :class="{ 'active': selectedButton.value === 'Attention' }"
+      @click="selectButton('Attention')"
+    >
+      Your attention
+    </CButton>
+  </CButtonGroup>
+
+  <div style="height: 20px;"></div>
+  <!-- 文章流 -->
+  <InfiniteArticle />
+  <InfiniteArticle :selectedButton="selectedButton" />
+  <div style="height: 15px;"></div>

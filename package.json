@@ -1,0 +1,50 @@
+{
+  "name": "@coreui/coreui-free-vue-admin-template",
+  "version": "5.0.0-rc.0",
+  "description": "CoreUI Free Vue Admin Template",
+  "bugs": {
+    "url": "https://github.com/coreui/coreui-free-vue-admin-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coreui/coreui-free-vue-admin-template.git"
+  },
+  "license": "MIT",
+  "author": "The CoreUI Team (https://github.com/orgs/coreui/people)",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "vite build",
+    "lint": "eslint \"src/**/*.{js,vue}\"",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@coreui/chartjs": "^4.0.0-rc.0",
+    "@coreui/coreui": "^5.0.0-rc.1",
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-vue": "2.0.0",
+    "@coreui/utils": "^2.0.2",
+    "@coreui/vue": "^5.0.0-rc.1",
+    "@coreui/vue-chartjs": "^3.0.0-rc.0",
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.6.7",
+    "chart.js": "^4.4.1",
+    "element-plus": "^2.6.0",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.6.3",
+    "simplebar-vue": "^2.3.3",
+    "vant": "^4.8.5",
+    "vue": "^3.4.3",
+    "vue-next": "^0.0.1",
+    "vue-router": "^4.3.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.2",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "postcss": "^8.4.32",
+    "sass": "^1.69.6",
+    "vite": "^5.0.10"
+  }
+}

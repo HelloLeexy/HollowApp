@@ -1,0 +1,34 @@
+<div class="app-container">
+    <div class="post-container">
+      <el-form ref="form" :model="form" label-width="120px">
+        <el-form-item label="Post title">
+          <el-input v-model="form.title" />
+        </el-form-item>
+        <el-form-item label="Tag">
+          <el-select v-model="form.region" placeholder="please select your post category">
+            <el-option label="Programming" value="Programming" />
+            <el-option label="Internet Technology" value="Internet Technology" />
+            <el-option label="Advanced Programming" value="Advanced Programming" />
+            <el-option label="Information Visualisation" value="Information Visualisation" />
+            <el-option label="Database Theory And Analytics" value="Database Theory And Analytics" />
+            <el-option label="Forensics" value="Forensics" />
+            <el-option label="Enterprise Cyber Security" value="Enterprise Cyber Security" />
+            <el-option label="IT+ Team Project" value="IT+ Team Project" />
+            <el-option label="Software Engineering" value="Software Engineering" />
+            <el-option label="System And Networks" value="System And Networks" />
+            <el-option label="Human Computer Interaction Design And Evaluation" value="Human Computer Interaction Design And Evaluation" />
+            <el-option label="Cryptography And Secure Development" value="Cryptography And Secure Development" />
+            <el-option label="Cybersecurity Fundamentals for Msc" value="Cybersecurity Fundamentals for Msc" />
+          </el-select>
+        </el-form-item>
+        
+        <el-form-item label="Post content">
+          <el-input v-model="form.desc" type="textarea" :rows="10"/>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="onSubmit">Create</el-button>
+          <el-button @click="onCancel">Cancel</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
+  </div>

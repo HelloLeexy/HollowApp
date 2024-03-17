@@ -1,0 +1,36 @@
+
+.common-layout {
+    display: flex;
+    flex-wrap: wrap; /* 允许元素在必要时换行 */
+}
+
+.borderMain, .borderRight {
+    border-color: rgb(218, 218, 218);
+    position: relative; /* 使用flex布局后，绝对定位可能不再必要 */
+}
+
+.borderMain {
+    width: 65%;
+}
+
+.borderRight {
+    width: 35%;
+}
+
+
+@media (max-width: 992px) {
+    /*.borderMain, .borderRight {
+        width: 100%; /* 较小屏幕上元素占满全宽 */
+
+    .borderMain {
+        width: 65%;
+    }
+    
+    .borderRight {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 对于更小的屏幕，可以继续使用 100% 的宽度，或根据需要进行其他调整 */
+}

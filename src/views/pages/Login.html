@@ -1,0 +1,57 @@
+<div class="login-container">
+    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
+
+      <div class="title-container">
+        <h3 class="title">Login Form</h3>
+      </div>
+
+      <el-form-item prop="username">
+        <div class="input-with-icon">
+          <div class="icon-wrapper">
+            <img src="@/assets/icons/user.png" alt="User Icon" class="scaled-icon">
+          </div>
+          <div class="el-input__inner">
+            <el-input ref="username"
+                      v-model="loginForm.username"
+                      placeholder="Username"
+                      name="username"
+                      type="text"
+                      tabindex="1"
+                      auto-complete="on" />
+          </div>
+        </div>
+      </el-form-item>
+
+      <el-form-item prop="password">
+        <div class="input-with-icon">
+          <div class="icon-wrapper">
+            <img src="@/assets/icons/lock.png" alt="Lock Icon" class="scaled-icon">
+          </div>
+          <div class="el-input__inner">
+            <el-input :key="passwordType"
+                      ref="password"
+                      v-model="loginForm.password"
+                      :type="passwordType"
+                      placeholder="Password"
+                      name="password"
+                      tabindex="2"
+                      auto-complete="on"
+                      @keyup.enter.native="handleLogin" />
+          </div>
+          <div class="show-pwd" @click="showPwd">
+            <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" class="password-icon" />
+          </div>
+        </div>
+      </el-form-item>
+
+      <el-button :loading="loading" type="primary" style="width:100%;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button style="margin-left: 320px;
+                   margin-top:5px;
+                   background-color: transparent;
+                   border: none; padding: 5px 10px;
+                   line-height: 1.5;
+                   color: #4A90E2;
+                   font-size: 14px; "
+                 @click="handleCreateAccount">Create Account</el-button>
+    </el-form>
+  </div>

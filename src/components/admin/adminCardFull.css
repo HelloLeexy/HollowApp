@@ -1,0 +1,57 @@
+.icon-container {
+    display: flex;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-right: 20px; /* Add some margin between the icon and text for spacing */
+  }
+  
+  .scaled-icon {
+    width: 20px; /* Set the width of the icon as needed */
+    height: 20px; /* Set the height of the icon as needed */
+    margin-right: 5px; /* Adjust the margin as needed */
+    margin-bottom: -5px;
+  }
+  
+  .icon {
+    display: inline-block;
+  }
+  
+  
+  .row {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+  }
+  
+  
+  
+  .body {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .title {
+    font-size: 14px;
+    font-weight: bolder;
+  }
+  
+  .text {
+    font-size: 14px;
+  }
+  
+  .tag {
+    margin-right: 5px;
+  }
+  
+  
+  
+  .box-card {
+    width: 100%;
+    margin-left: 0%;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    padding: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }

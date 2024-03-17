@@ -1,0 +1,42 @@
+
+.contact-us {
+    text-align: center;
+  }
+  
+  .header {
+    position: relative;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+  }
+  
+  .overlay h1 {
+    font-size: 2em;
+    margin: 10px 0;
+    white-space: nowrap;
+  }
+  
+  .overlay p {
+    font-size: 1em;
+    margin: 10px 0;
+    white-space: nowrap;
+  }
+  
+  .footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end; 
+  }

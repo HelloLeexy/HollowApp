@@ -1,0 +1,40 @@
+
+<div class="container">
+    <CInputGroup class="input-prepend">
+      <CInputGroupText>
+        <CIcon icon="cil-magnifying-glass" />
+      </CInputGroupText>
+      <CFormInput type="text" placeholder="Search For" />
+      <CButton color="info">Search</CButton>
+    </CInputGroup>
+      <br>
+    
+      <div class="classification">
+        <span>Classification</span>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-outline-primary">IT</button>
+          <button type="button" class="btn btn-outline-primary">IV</button>
+          <button type="button" class="btn btn-outline-primary">PSD</button>
+          <button type="button" class="btn btn-outline-primary">HCI</button>
+          
+        </div>
+      </div>
+    
+  
+      <br>
+      <el-badge value="hot" class="custom-badge" backgroundColor='#FF0000' >
+        <text class="custom-text">Hot topics</text>
+      </el-badge>
+      <el-card class="card" shadow="never">
+        <ArticleCardMini :articleList="articleList" />
+      </el-card>
+  
+      <br>
+      <el-badge value="hot" class="item">
+          <text>Active users</text>
+      </el-badge>
+      <el-card class="card" shadow="never">
+        <ArticleCardMini :articleList="userList" />
+      </el-card>
+  </div>
+  
