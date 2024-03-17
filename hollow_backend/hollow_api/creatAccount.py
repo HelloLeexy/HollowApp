@@ -23,7 +23,7 @@ def create_account(request):
     selectedCoursesString = data.get('selectedCoursesString')
     # Generate a unique UserID using UUID
     user_id = str(uuid.uuid4())
-    img = str(random.randint(1, 9))+'.png'
+    img = str(random.randint(1, 9))
 
     # Create a new user with the provided data and generated UserID
     user = CustomUser.objects.create_user(

@@ -1,5 +1,7 @@
-<template src="./InfiniteArticle.html" >
-
+<template>
+  <div>
+    <ArticleCardFull :articleList="filteredArticles" />
+  </div>
 </template>
 
 <script setup>
@@ -31,7 +33,7 @@ onMounted(async () => {
 
     // 发起 GET 请求获取选定课程数据
     //const response = await axios.get(`http://localhost:8000/api/get_postselectedCoursesString/${userID.value}/`);
-    const response = await axios.post('http://localhost:8000/api/get_postselectedCoursesString/', { userID: userID });
+    const response = await axios.post('http://8.208.87.180:443/api/get_postselectedCoursesString/', { userID: userID });
     selectedCourses.value = response.data.selectedCourses;
     console.log(selectedCourses.value);
 
@@ -47,7 +49,7 @@ onMounted(async () => {
   try {
 
     const userID = getUserID.value;
-    const response = await axios.post('http://localhost:8000/api/get_user_favorite_posts/', { userID: userID });
+    const response = await axios.post('http://8.208.87.180:443/api/get_user_favorite_posts/', { userID: userID });
     const info = response.data.favorite_posts;
     for (let i = 0; i < info.length; i++) {
       favorate.value.push(info[i])
@@ -63,7 +65,7 @@ onMounted(async () => {
 onMounted(async () => {
   try {
     // 发起 GET 请求获取文章数据
-    const response = await axios.get('http://localhost:8000/api/get_post/');
+    const response = await axios.get('http://8.208.87.180:443/api/get_post/');
     const parsedPosts = response.data.posts;
 
     for (let i = 0; i < parsedPosts.length; i++) {
@@ -79,7 +81,7 @@ onMounted(async () => {
 });
 
 async function requireImage(img) {
-  const relativePath = `../../../../assets/head/${img}`;
+  const relativePath = `../../../../assets/images/${img}`;
   const imageModule = await import(relativePath);
   return imageModule.default;
 }

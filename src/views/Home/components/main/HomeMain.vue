@@ -12,11 +12,79 @@ const selectButton = (button) => {
 
 </script>
 
-<template src="./HomeMain.html" >
-   
+<template>
+    <CButtonGroup role="group" aria-label="Basic example" class="custom-button-group">
+    <CButton
+      class="custom-button"
+
+      :class="{ 'active': selectedButton.value=== 'Latest' }"
+      @click="selectButton('Latest')"
+    >
+      Latest Posts
+    </CButton>
+    <CButton
+      class="custom-button"
+
+      :class="{ 'active': selectedButton.value === 'Recommend' }"
+      @click="selectButton('Recommend')"
+    >
+      Recommend
+    </CButton>
+    <CButton
+      class="custom-button"
+
+      :class="{ 'active': selectedButton.value === 'Attention' }"
+      @click="selectButton('Attention')"
+    >
+      Your attention
+    </CButton>
+  </CButtonGroup>
+
+  <div style="height: 20px;"></div>
+  <!-- 文章流 -->
+  <InfiniteArticle />
+  <InfiniteArticle :selectedButton="selectedButton" />
+  <div style="height: 15px;"></div>
 </template>
 
-<style src="./HomeMain.css" scoped>
+<style scoped>
 
+  .custom-button-group .btn {
+    position: relative;
+  }
 
+  .custom-button-group .btn:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 1px;
+    background-color: white; /* 白色竖线的颜色 */
+    margin-left: 8px; /* 调整竖线与按钮之间的距离 */
+  }
+
+  .custom-button-group {
+  display: flex;
+  width: 60%; /* 将宽度设置为父容器的50% */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button {
+  position: relative;
+  background-color: #CCCCCC; /* 浅灰色背景 */
+  color: #333; /* 字体颜色 */
+  transition: color 0.3s; /* 添加过渡效果 */
+  width: 10px; /* 设置按钮宽度 */
+  text-align: center; /* 文字居中 */
+}
+
+.custom-button:active {
+  color: #5bc0de; /* 按下按钮时的浅蓝色字体 */
+}
+.custom-button.active {
+  color: #5bc0de;
+  background-color: white;
+}
 </style>

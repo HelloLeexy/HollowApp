@@ -13,7 +13,7 @@ onMounted(async () => {
   try {
     // 发起 GET 请求获取文章数据
     const userID = getUserID.value;
-    const response = await axios.get('http://localhost:8000/api/get_admin/');
+    const response = await axios.get('http://8.208.87.180:443/api/get_admin/');
     console.log(response.data)
     // 检查响应结构
     // console.log(JSON.parse(response.data.posts));
@@ -33,7 +33,7 @@ onMounted(async () => {
 
 async function requireImage(img) {
   // 动态导入图片
-  const relativePath = `../../../../assets/head/${img}`;
+  const relativePath = `../../../../assets/images/${img}`;
   console.log(relativePath);
   // 动态导入图片，使用相对路径
   const imageModule = await import(relativePath);
@@ -42,6 +42,8 @@ async function requireImage(img) {
 
 </script>
 
-<template src="./InfiniteArticle.html" >
-
+<template>
+  <div>
+    <ArticleCardFull :articleList="articleList" />
+  </div>
 </template>

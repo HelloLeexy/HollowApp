@@ -49,10 +49,76 @@ onMounted(() => {
 
 </script>
 
-<template src="./HomeRight.html" >
+<template>
+
+  <div class="container">
+
+    <CFormFloating>
+    <CFormTextarea
+      id="floatingTextarea"
+      floatingLabel="Search"
+      placeholder="Leave a comment here"
+    ></CFormTextarea>
+  </CFormFloating>
+    <br>
+    <CListGroup>
+      <CListGroupItem class="d-flex justify-content-between align-items-center">Internet Technology<CBadge color="primary" shape="rounded-pill">14</CBadge></CListGroupItem>
+      <CListGroupItem class="d-flex justify-content-between align-items-center">Information Visualization<CBadge color="primary" shape="rounded-pill">2</CBadge></CListGroupItem>
+      <CListGroupItem class="d-flex justify-content-between align-items-center">Human-Computer Interaction<CBadge color="primary" shape="rounded-pill">1</CBadge></CListGroupItem>
+    </CListGroup>
+
+    <br>
+    <el-badge value="hot" class="item">
+      <div class="section-header">
+        <el-text>Hot topics</el-text>
+      </div>
+    </el-badge>
+    <el-card class="card" shadow="never">
+      <ArticleCardMini :articleList="articleList" />
+    </el-card>
+
+    <br>
+    <el-badge value="hot" class="item">
+      <div class="section-header">
+        <el-text>Active users</el-text>
+      </div>
+    </el-badge>
+    <el-card class="card" shadow="never">
+      <ArticleCardMini :articleList="userList" />
+    </el-card>
+  </div>
+
+
+
 </template>
 
-<style src="./HomeRight.css" scoped>
+<style scoped>
+.container {
+  margin-top: 18px;
+}
 
+.section {
+  margin-bottom: 10px;
+}
+
+.section-header {
+  margin-bottom: 10px;
+}
+
+.card {
+  shadow: never;
+}
+
+.tag {
+  /* Add any specific styling for the tags */
+}
+
+.input {
+  /* Add any specific styling for the input */
+}
+
+.item {
+  margin-bottom: 10px;
+}
 </style>
 

@@ -13,7 +13,7 @@ onMounted(async () => {
   try {
     // 发起 POST 请求获取用户数据
     const userID = getUserID.value;
-    const response = await axios.post('http://localhost:8000/api/get_user/', { userID: userID });
+    const response = await axios.post('http://8.208.87.180:443/api/get_user/', { userID: userID });
     
     const users = response.data.users;
 
@@ -34,13 +34,15 @@ onMounted(async () => {
 
 async function requireImage(img) {
   // 动态导入图片
-  const relativePath = `../../../../assets/head/${img}`;
+  const relativePath = `../../../../assets/images/${img}`;
   // 动态导入图片，使用相对路径
   const imageModule = await import(relativePath);
   return imageModule.default;
 }
 </script>
 
-<template src="./HomeAbove.html" >
-
+<template>
+  <div>
+    <UserCardFull :userList="userList" />
+  </div>
 </template>

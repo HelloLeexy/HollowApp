@@ -13,7 +13,7 @@ onMounted(async () => {
   try {
     // 发起 GET 请求获取文章数据
     const userID = getUserID.value;
-    const response = await axios.post('http://localhost:8000/api/get_follow/', { userID: userID });
+    const response = await axios.post('http://8.208.87.180:443/api/get_follow/', { userID: userID });
     console.log(response.data)
     // 检查响应结构
     // console.log(JSON.parse(response.data.posts));
@@ -33,7 +33,7 @@ onMounted(async () => {
 
 async function requireImage(img) {
   // 动态导入图片
-  const relativePath = `../../../../assets/head/${img}`;
+  const relativePath = `../../../../assets/images/${img}`;
   console.log(relativePath);
   // 动态导入图片，使用相对路径
   const imageModule = await import(relativePath);

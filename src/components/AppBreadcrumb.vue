@@ -1,5 +1,14 @@
-<template src="./AppBreadcrumb.html" >
-
+<template>
+  <CBreadcrumb class="my-0">
+    <CBreadcrumbItem
+      v-for="item in breadcrumbs"
+      :key="item"
+      :href="item.active ? '' : item.path"
+      :active="item.active"
+    >
+      {{ item.name }}
+    </CBreadcrumbItem>
+  </CBreadcrumb>
 </template>
 
 <script>
